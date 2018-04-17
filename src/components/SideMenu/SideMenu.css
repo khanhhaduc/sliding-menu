@@ -1,0 +1,52 @@
+.SideMenu {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+}
+
+.SideMenu .MenuItem {
+  width: 7vw;
+  height: 7vw;
+  left: 20%;
+  position: absolute;
+  opacity: 0;
+  border: solid 2px white;
+  border-radius: 50%;
+}
+
+.SideMenu.show .MenuItem {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  animation-duration: 0.1s;
+  -webkit-animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  visibility: visible !important;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
