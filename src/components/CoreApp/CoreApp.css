@@ -5,7 +5,7 @@
   width: 100%;
   border: black;
   border-style: solid 1px;
-  background-color: white;
+  background-color: rgb(252, 252, 252);
   position: absolute;
   overflow: hidden;
   -webkit-transition: all 0.2s;
@@ -16,7 +16,7 @@
 }
 
 .CoreApp.is-moved {
-  left: 20%;
+  left: 30%;
   top: 3%;
   height: 90%;
   width: 95%;
@@ -28,35 +28,48 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 7%;
-  opacity: 0.7;
+  height: 8vh;
+  opacity: 0.9;
   color: white;
-  font-size: 1em;
   text-align: center;
-  background-color: #0ebfe9;
+  background-color: rgb(67, 176, 215);
+  z-index: 1;
 }
 
-.CoreApp .header::before {
+.CoreApp::before {
   content: "";
-  margin: -35px;
+  width: 100%;
+  height: 20%;
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   filter: blur(20px);
   z-index: -1;
 }
 
-.CoreApp .header .span {
-  display: inline-block;
-  vertical-align: middle;
+.CoreApp .header .title {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 3vh;
+  font-weight: lighter;
+  top: 2vh;
+  transform: translateY(-50%);
 }
 
 .CoreApp .MenuBtn {
-  width: 10%;
-  height: 10%;
+  opacity: 1;
+  width: 8vh;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  display: "inline-flex";
+  justify-content: "center";
+  align-items: "center";
+}
+
+.MenuBtn:hover {
+  background-color: lightskyblue;
 }

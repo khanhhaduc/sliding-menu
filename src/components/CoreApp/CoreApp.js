@@ -1,7 +1,9 @@
 import React, { Component } from "react"
+import Icon from "react-icons-kit"
+import { software_paragraph_justify_all } from "react-icons-kit/linea/software_paragraph_justify_all"
+
 import MessageList from "../MessageList/MessageList"
 import "./CoreApp.css"
-import FaAlignJustify from "react-icons/lib/fa/align-justify"
 
 class CoreApp extends Component {
   render() {
@@ -10,9 +12,15 @@ class CoreApp extends Component {
       <div className={`CoreApp ${(showSideMenu && "is-moved") || ""}`}>
         <div className="header">
           <div className="MenuBtn" onClick={toggleSideMenu}>
-            <FaAlignJustify style={{}} />
+            <Icon
+              style={{
+                marginTop: "10px",
+              }}
+              icon={software_paragraph_justify_all}
+              size={22}
+            />
           </div>
-          <span>Inbox</span>
+          <span className="title">Inbox</span>
         </div>
         <MessageList />
       </div>
