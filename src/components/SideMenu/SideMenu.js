@@ -28,6 +28,7 @@ class SideMenu extends Component {
               background: `url('${imgUrl}') no-repeat`,
               backgroundColor: "white",
               backgroundSize: "100%",
+              borderRadius: "50%",
             }),
             animationDelay: 0.2 * index + "s",
             transitionDelay: 0.2 * index + "s",
