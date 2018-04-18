@@ -4,17 +4,46 @@
   width: 30%;
 }
 
-.SideMenu .MenuItem {
-  width: 7vw;
-  height: 7vw;
-  left: 20%;
+.SideMenu .MenuContainer {
   position: absolute;
+  width: 55px;
+  height: 55px;
+  left: 10vw;
+  color: white;
+}
+
+.SideMenu .MenuContainer .MenuItem {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   opacity: 0;
-  border: solid 2px white;
+  font-size: 3em;
+  border: solid 1px white;
   border-radius: 50%;
 }
 
-.SideMenu.show .MenuItem {
+.SideMenu .MenuContainer .MenuItemBig {
+  position: absolute;
+  left: -50px;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px lightslategray;
+}
+
+.MenuItemBig span {
+  font-family: "Work Sans", sans-serif;
+}
+
+.SideMenu .MenuContainer .MenuItem a {
+  position: relative;
+  margin-left: 12px;
+  bottom: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.SideMenu.show .MenuContainer .MenuItem {
   animation-name: fadeIn;
   -webkit-animation-name: fadeIn;
   animation-duration: 0.1s;
@@ -23,6 +52,13 @@
   -webkit-animation-timing-function: ease-in-out;
   visibility: visible !important;
   opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .SideMenu .MenuContainer {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 @keyframes fadeIn {
